@@ -941,7 +941,7 @@ input[type="submit"]:hover {
 	background: #33363B;
 }
 
-.header { padding: 40px 0; }
+.header { padding: 40px 10px; }
 
 .blog-title {
 	font-size: 1.5em;
@@ -970,7 +970,10 @@ input[type="submit"]:hover {
 
 .blog-logo,
 .blog-logo img {
+	height: 62px;
+	margin-right: 4px;
 	display: block;
+	float: left;
 }
 
 
@@ -2927,9 +2930,10 @@ div.comment { margin-top: 25px; }
 	.search-container .search-button .fa { font-size: 32px; }
 	
 	/* Site Header --------------------------- */
+
 	
 	.header {
-		padding: 25px 0;
+		padding: 25px 10px;
 		border-top: 8px solid #26272B;
 	}
 	
@@ -3409,9 +3413,10 @@ div.comment { margin-top: 25px; }
 	}
 
 	/* Site Header --------------------------- */
+
 	
 	.header {
-		padding: 22px 0;
+		padding: 22px 10px;
 		border-top-width: 4px;
 	}
 	
