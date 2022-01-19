@@ -32,26 +32,26 @@ if ( ! class_exists( 'Rowling_Customize' ) ) :
 				'settings' 	=> 'accent_color',
 				'priority' 	=> 10,
 			) ) );
-			
+
 			/* SETTING: CUSTOM LOGO */
 
 			// Only display the Customizer section for the rowling_logo setting if it already has a value.
 			// This means that site owners with existing logos can remove them, but new site owners can't add them.
 			// Since v2.0.0, the core custom_logo setting (in the Site Identity Customizer panel) should be used instead.
 			if ( get_theme_mod( 'rowling_logo' ) ) {
-				
+
 				$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'rowling_logo', array(
 					'label'    => __( 'Logo', 'rowling' ),
 					'section'  => 'rowling_options',
 					'settings' => 'rowling_logo',
 				) ) );
-				
+
 				$wp_customize->add_setting( 'rowling_logo', array(
 					'sanitize_callback' => 'esc_url_raw'
 				) );
 
 			}
-			
+
 		}
 
 		public static function header_output() {
@@ -106,7 +106,7 @@ if ( ! class_exists( 'Rowling_Customize' ) ) :
 			self::generate_css( '.archive-title', 'border-bottom-color', $accent );
 			self::generate_css( '.archive-nav a:hover', 'color', $accent );
 
-			self::generate_css( '.widget-title', 'border-bottom-color', $accent );	
+			self::generate_css( '.widget-title', 'border-bottom-color', $accent );
 			self::generate_css( '.widget-content .textwidget a:hover', 'color', $accent );
 			self::generate_css( '.widget_archive li a:hover', 'color', $accent );
 			self::generate_css( '.widget_categories li a:hover', 'color', $accent );
@@ -129,7 +129,7 @@ if ( ! class_exists( 'Rowling_Customize' ) ) :
 
 			echo '</style>';
 			echo '<!--/Customizer CSS-->';
-				
+
 		}
 
 		public static function generate_css( $selector, $style, $value, $prefix='', $postfix='', $echo=true ) {

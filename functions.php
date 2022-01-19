@@ -7,27 +7,27 @@
 
 if ( ! function_exists( 'rowling_setup' ) ) :
 	function rowling_setup() {
-		
+
 		// Automatic feed
 		add_theme_support( 'automatic-feed-links' );
-		
+
 		// Title tag
 		add_theme_support( 'title-tag' );
-		
+
 		// Add post format support
 		add_theme_support( 'post-formats', array( 'gallery' ) );
-		
+
 		// Set content-width
 		global $content_width;
 		if ( ! isset( $content_width ) ) $content_width = 616;
-		
+
 		// Post thumbnails
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size ( 88, 88, true );
-		
+
 		add_image_size( 'post-image', 816, 9999 );
 		add_image_size( 'post-image-thumb', 400, 200, true );
-			
+
 		// Add nav menus
 		register_nav_menu( 'primary', __( 'Primary Menu', 'rowling' ) );
 		register_nav_menu( 'secondary', __( 'Secondary Menu', 'rowling' ) );
@@ -41,10 +41,10 @@ if ( ! function_exists( 'rowling_setup' ) ) :
 			'flex-width'  => true,
 			'header-text' => array( 'blog-title', 'blog-description' ),
 		) );
-		
+
 		// Make the theme translation ready
 		load_theme_textdomain( 'rowling', get_template_directory() . '/languages' );
-		
+
 	}
 	add_action( 'after_setup_theme', 'rowling_setup' );
 endif;
@@ -59,7 +59,7 @@ if ( ! function_exists( 'rowling_load_javascript_files' ) ) :
 
 		$theme_version = wp_get_theme( 'rowling' )->get( 'Version' );
 
-		wp_register_script( 'rowling_flexslider', get_template_directory_uri() . '/assets/js/flexslider.js', '2.4.0', true );	
+		wp_register_script( 'rowling_flexslider', get_template_directory_uri() . '/assets/js/flexslider.js', '2.4.0', true );
 		wp_register_script( 'rowling_doubletap', get_template_directory_uri() . '/assets/js/doubletaptogo.js', $theme_version, true );
 
 		wp_enqueue_script( 'rowling_global', get_template_directory_uri() . '/assets/js/global.js', array( 'jquery', 'rowling_flexslider', 'rowling_doubletap' ), $theme_version, true );
@@ -207,13 +207,13 @@ if ( ! function_exists( 'rowling_html_js_class' ) ) {
 if ( ! function_exists( 'rowling_related_posts' ) ) :
 	function rowling_related_posts( $number_of_posts = 3 ) {
 		?>
-		
+
 		<div class="related-posts">
-			
+
 			<p class="related-posts-title"><?php _e( 'Read Next', 'rowling' ); ?> &rarr;</p>
-			
+
 			<div class="row">
-							
+
 				<?php
 
 				global $post;
@@ -224,7 +224,7 @@ if ( ! function_exists( 'rowling_related_posts' ) ) :
 					'meta_key'				=>	'_thumbnail_id',
 					'posts_per_page'		=>	$number_of_posts,
 					'post_status'			=>	'publish',
-					'post__not_in'			=>	array( $post->ID ),	
+					'post__not_in'			=>	array( $post->ID ),
 				);
 
 				// Create a query for posts in the same category as the ones for the current post
@@ -237,7 +237,7 @@ if ( ! function_exists( 'rowling_related_posts' ) ) :
 				}
 
 				$term_posts_args = array_merge( $base_args, array( 'category__in' => $cat_ids ) );
-				
+
 				$related_posts = get_posts( $term_posts_args );
 
 				// No results for the categories? Get random posts instead
@@ -251,40 +251,40 @@ if ( ! function_exists( 'rowling_related_posts' ) ) :
 
 				// If either the category query or random query hit pay dirt, output the posts
 				if ( $related_posts ) :
-					
+
 					foreach( $related_posts as $related_post ) : ?>
-				
+
 						<a class="related-post" href="<?php echo get_the_permalink( $related_post->ID ); ?>">
-							
+
 							<?php if ( has_post_thumbnail( $related_post->ID ) ) : ?>
-								
+
 								<?php echo get_the_post_thumbnail( $related_post->ID, 'post-image-thumb' ) ?>
-								
+
 							<?php endif; ?>
-							
+
 							<p class="category">
 								<?php
 								$category = get_the_category( $related_post->ID );
 								echo $category[0]->cat_name;
 								?>
 							</p>
-					
+
 							<h3 class="title"><?php echo get_the_title( $related_post->ID ); ?></h3>
-								
+
 						</a>
-					
+
 						<?php
 
 					endforeach;
-				
+
 				endif;
-				
+
 				?>
-			
+
 			</div><!-- .row -->
 
 		</div><!-- .related-posts -->
-		
+
 		<?php
 
 	}
@@ -324,12 +324,12 @@ endif;
 
 if ( ! function_exists( 'rowling_body_classes' ) ) :
 	function rowling_body_classes( $classes ) {
-	
+
 		// If has post thumbnail
 		if ( is_single() && has_post_thumbnail() ){
 			$classes[] = 'has-featured-image';
 		}
-		
+
 		return $classes;
 
 	}
@@ -390,15 +390,15 @@ if ( ! function_exists( 'rowling_flexslider' ) ) :
 		) );
 
 		if ( ! $images ) return;
-		
+
 		?>
-		
+
 		<?php if ( ! is_single() ) : // Make it a link if it's an archive ?>
 			<a class="flexslider" href="<?php the_permalink(); ?>">
 		<?php else : // ...and just a div if it's a single post ?>
 			<div class="flexslider">
 		<?php endif; ?>
-		
+
 		<ul class="slides reset-list-style">
 
 			<?php foreach ( $images as $image ) :
@@ -406,23 +406,23 @@ if ( ! function_exists( 'rowling_flexslider' ) ) :
 				$attimg = wp_get_attachment_image( $image->ID, $size );
 
 				if ( ! $attimg ) continue;
-				
+
 				?>
-				
+
 				<li>
 					<?php
-					
+
 					echo $attimg;
 
 					if ( ! empty( $image->post_excerpt ) && is_single() ) : ?>
 						<p class="post-image-caption"><span class="fa fw fa-camera"></span><?php echo $image->post_excerpt; ?></p>
 					<?php endif; ?>
 				</li>
-				
+
 			<?php endforeach; ?>
 
 		</ul><!-- .slides -->
-		
+
 		<?php
 		echo ! is_single() ? '</a>' : '</div>';
 
@@ -441,11 +441,11 @@ if ( ! function_exists( 'rowling_comment' ) ) :
 			case 'pingback' :
 			case 'trackback' :
 		?>
-		
+
 		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-		
+
 			<?php __( 'Pingback:', 'rowling' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'rowling' ), '<span class="edit-link">', '</span>' ); ?>
-			
+
 		</li>
 		<?php
 				break;
@@ -453,47 +453,47 @@ if ( ! function_exists( 'rowling_comment' ) ) :
 			global $post;
 		?>
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		
+
 			<div id="comment-<?php comment_ID(); ?>" class="comment">
-				
+
 				<?php echo get_avatar( $comment, 160 ); ?>
-				
+
 				<?php if ( $comment->user_id === $post->post_author ) : ?>
-						
+
 					<a class="comment-author-icon" href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 						<div class="fa fw fa-user"></div>
 						<span class="screen-reader-text"><?php _e( 'Comment by post author', 'rowling' ); ?></span>
 					</a>
-				
+
 				<?php endif; ?>
-				
+
 				<div class="comment-inner">
-				
+
 					<div class="comment-header">
-												
+
 						<h4><?php echo get_comment_author_link(); ?></h4>
-					
+
 					</div><!-- .comment-header -->
-					
+
 					<div class="comment-content post-content entry-content">
-				
+
 						<?php comment_text(); ?>
-						
+
 					</div><!-- .comment-content -->
-					
+
 					<div class="comment-meta group">
-						
+
 						<div class="fleft">
 							<div class="fa fw fa-clock-o"></div><a class="comment-date-link" href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php echo get_comment_date( get_option( 'date_format' ) ); ?></a>
 							<?php edit_comment_link( __( 'Edit', 'rowling' ), '<div class="fa fw fa-wrench"></div>', '' ); ?>
 						</div>
-						
+
 						<?php if ( '0' == $comment->comment_approved ) : ?>
-					
+
 							<div class="comment-awaiting-moderation fright">
 								<div class="fa fw fa-exclamation-circle"></div><?php _e( 'Awaiting moderation', 'rowling' ); ?>
 							</div>
-							
+
 						<?php else :
 
 							comment_reply_link( array(
@@ -503,15 +503,15 @@ if ( ! function_exists( 'rowling_comment' ) ) :
 								'before'		=> '<div class="fright"><div class="fa fw fa-reply"></div>',
 								'after'			=> '</div>'
 							) );
-							
+
 						endif; ?>
-						
+
 					</div><!-- .comment-meta -->
-									
+
 				</div><!-- .comment-inner -->
-											
+
 			</div><!-- .comment-## -->
-					
+
 		<?php
 			break;
 		endswitch;

@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
 
 
 	// Toggle mobile menu
-	$(".nav-toggle").on("click", function(){	
+	$(".nav-toggle").on("click", function(){
 		$(this).toggleClass("active");
 		$(".mobile-menu").slideToggle();
 		if ($(".search-toggle").hasClass("active")) {
@@ -11,10 +11,10 @@ jQuery(document).ready(function($) {
 		}
 		return false;
 	});
-	
-	
+
+
 	// Toggle search container
-	$(".search-toggle").on("click", function(){	
+	$(".search-toggle").on("click", function(){
 		$(this).toggleClass("active");
 		$(".search-container").slideToggle();
 		if ($(".nav-toggle").hasClass("active")) {
@@ -28,29 +28,29 @@ jQuery(document).ready(function($) {
 	$( '.dropdown-menu a' ).on( 'blur focus', function( e ) {
 		$( this ).parents( 'li.menu-item-has-children' ).toggleClass( 'focus' );
 	} );
-	
-	
+
+
 	// Hide mobile menu/search container at resize
 	$(window).resize(function() {
-	
+
 		if ($(window).width() >= 850) {
 			$(".nav-toggle").removeClass("active");
 			$('.mobile-menu').hide();
 		}
-		
+
 		if ($(window).width() <= 850) {
 			$(".search-toggle").removeClass("active");
 			$('.search-container').hide();
 		}
-	
+
 	});
-	
-	
+
+
 	// Dropdown menus on touch devices
 	$( '.primary-menu li:has(ul)' ).doubleTapToGo();
 	$( '.secondary-menu li:has(ul)' ).doubleTapToGo();
-	
-	
+
+
 	// Load Flexslider
     $(".flexslider").flexslider({
         animation: "slide",
@@ -59,19 +59,19 @@ jQuery(document).ready(function($) {
         nextText: "",
         smoothHeight: true
     });
-	
-	
-	// smooth scroll to the top	
+
+
+	// smooth scroll to the top
 	jQuery(document).ready(function($){
 	    $('.to-the-top').click(function(){
 	        $("html, body").animate({ scrollTop: 0 }, 500);
 	        return false;
 	    });
 	});
-	
-	
+
+
 	// resize videos after container
-	var vidSelector = ".post iframe, .post object, .post video";	
+	var vidSelector = ".post iframe, .post object, .post video";
 	var resizeVideo = function(sSel) {
 		$( sSel ).each(function() {
 			var $video = $(this),
@@ -95,6 +95,6 @@ jQuery(document).ready(function($) {
 	$(window).resize(function() {
 		resizeVideo(vidSelector);
 	});
-	
+
 
 });

@@ -3,14 +3,14 @@
 <html class="no-js" <?php language_attributes(); ?>>
 
 	<head profile="http://gmpg.org/xfn/11">
-		
+
 		<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
-		
+
 		<?php wp_head(); ?>
-	
+
 	</head>
-	
+
 	<body <?php body_class(); ?>>
 
 		<?php
@@ -20,11 +20,11 @@
 		?>
 
 		<a class="skip-link button" href="#site-content"><?php _e( 'Skip to the content', 'rowling' ); ?></a>
-		
-		
+
+
 		<?php if ( has_nav_menu( 'secondary' )) : ?>
 			<div class="top-nav">
-				
+
 				<div class="section-inner group">
 
 					<?php if ( has_nav_menu( 'secondary' ) ) : ?>
@@ -63,7 +63,7 @@
 
 				<div class="section-inner">
 					<?php if ( has_nav_menu( 'social' ) ) : ?>
-				
+
 						<ul class="social-menu reset-list-style">
 							<?php
 							wp_nav_menu( array(
@@ -115,25 +115,25 @@
 
 
 					<div class="nav-toggle">
-						
+
 						<div class="bars">
 							<div class="bar"></div>
 							<div class="bar"></div>
 							<div class="bar"></div>
 						</div>
-						
+
 					</div><!-- .nav-toggle -->
-				
+
 				</div><!-- .section-inner -->
-				
+
 			</div><!-- .header -->
-			
+
 			<div class="navigation">
-				
+
 				<div class="section-inner group">
-					
+
 					<ul class="primary-menu reset-list-style dropdown-menu">
-						
+
 						<?php if ( has_nav_menu( 'primary' ) ) {
 
 							$nav_args = array(
@@ -141,9 +141,9 @@
 								'items_wrap' => '%3$s',
 								'theme_location' => 'primary'
 							);
-																		
+
 							wp_nav_menu( $nav_args );
-						
+
 						} else {
 
 							$list_pages_args = array(
@@ -152,17 +152,17 @@
 							);
 
 							wp_list_pages( $list_pages_args );
-							
+
 						} ?>
-															
+
 					</ul>
-					
+
 				</div><!-- .section-inner -->
-				
+
 			</div><!-- .navigation -->
-				
+
 			<ul class="mobile-menu reset-list-style">
-				
+
 				<?php
 				if ( has_nav_menu( 'primary' ) ) {
 					wp_nav_menu( $nav_args );
@@ -170,9 +170,9 @@
 					wp_list_pages( $list_pages_args );
 				}
 				?>
-				
+
 			</ul><!-- .mobile-menu -->
-				
+
 		</header><!-- .header-wrapper -->
 
 		<main id="site-content">

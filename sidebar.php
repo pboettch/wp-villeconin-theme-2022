@@ -2,13 +2,13 @@
 
 	<?php
 	if ( is_active_sidebar( 'sidebar' ) ) {
-		
+
 		dynamic_sidebar( 'sidebar' );
-		
+
 	} else { // Fallback if the sidebar widget area is empty
-		
+
 		echo '<div class="widgets">';
-		
+
 		the_widget( 'WP_Widget_Search',
 			array(),
 			array(
@@ -18,7 +18,7 @@
 				'after_widget' => '</div></div>'
 			)
 		);
-		
+
 		the_widget( 'rowling_recent_posts',
 			array(
 				'number_of_posts' 	=>	'5',
@@ -31,7 +31,7 @@
 				'after_widget' => '</div></div>'
 			)
 		);
-		
+
 		the_widget( 'WP_Widget_Categories',
 			array(
 				'count'			=>	'1',
@@ -44,7 +44,7 @@
 				'after_widget' => '</div></div>'
 			)
 		);
-		
+
 		the_widget( 'WP_Widget_Archives',
 			array(
 				'count'			=>	'1',
@@ -57,9 +57,9 @@
 				'after_widget' => '</div></div>'
 			)
 		);
-		
+
 		echo '</div>';
-		
+
 	}
 	?>
 
