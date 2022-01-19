@@ -1489,7 +1489,6 @@ input[type="submit"]:hover {
 /* Post Inner -------------------------------- */
 
 .single-post .post-inner {
-	padding-left: 200px;
 	position: relative;
 	z-index: 5;
 }
@@ -1673,6 +1672,7 @@ input[type="submit"]:hover {
 }
 
 .related-posts {
+	display: none;
 	width: 160px;
 	float: left;
 	position: relative;

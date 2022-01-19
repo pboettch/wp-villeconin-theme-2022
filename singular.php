@@ -79,7 +79,7 @@
 					endif;
 					
 					if ( is_single() ) {
-						rowling_related_posts();
+						// rowling_related_posts();
 					}
 
 					?>
