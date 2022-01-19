@@ -149,9 +149,7 @@
 		?>
 	
 	</div><!-- .content -->
-	
-	<?php get_sidebar(); ?>
-	
+
 </div><!-- .wrapper -->
 		
 <?php get_footer(); ?>

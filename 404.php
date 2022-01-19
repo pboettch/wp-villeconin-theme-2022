@@ -29,9 +29,7 @@
 		</article><!-- .post -->
 									                        		
 	</div><!-- .content -->
-	
-	<?php get_sidebar(); ?>
-	
+
 </div><!-- .wrapper.section-inner -->
 								
 <?php get_footer(); ?>

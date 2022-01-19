@@ -13,7 +13,7 @@
 	License: GNU General Public License version 2.0
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	Text Domain: rowling
-	
+
 	All files, unless otherwise stated, are released under the GNU General Public License
 	version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
 
@@ -577,7 +577,7 @@ input[type="submit"]:hover {
 
 .section-inner {
 	width: 1200px;
-	max-width: 88%;
+	max-width: 100%;
 	margin: 0 auto;
 }
 
@@ -588,7 +588,7 @@ input[type="submit"]:hover {
 .wrapper:before {
 	content: "";
 	display: block;
-	width: 28.5%;
+	width: 0%;
 	background: #f1f1f1;
 	border-left: 1px solid #ddd;
 	position: absolute;
@@ -605,8 +605,10 @@ input[type="submit"]:hover {
 }
 
 .content {
-	width: 68%;
-	float: left;
+	width: 88%;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .content:before {
@@ -615,15 +617,15 @@ input[type="submit"]:hover {
 	position: absolute;
 	z-index: -9999;
 	top: 0;
-	right: 28.5%;
+	right: 0;
 	bottom: 0;
-	left: -10000px;
+	left: 0;
 }
 
 .sidebar {
 	float: right;
 	padding: 50px 0 50px 3.75%;
-	width: 28.5%;
+	width: 0%;
 }
 
 
