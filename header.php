@@ -21,8 +21,8 @@
 
 		<a class="skip-link button" href="#site-content"><?php _e( 'Skip to the content', 'rowling' ); ?></a>
 		
-		<?php if ( has_nav_menu( 'secondary' ) || has_nav_menu( 'social' ) ) : ?>
 		
+		<?php if ( has_nav_menu( 'secondary' )) : ?>
 			<div class="top-nav">
 				
 				<div class="section-inner group">
@@ -41,6 +41,27 @@
 
 					<?php endif; ?>
 
+				</div><!-- .section-inner -->
+
+			</div><!-- .top-nav -->
+
+		<?php endif; ?>
+
+		<div class="search-container">
+
+			<div class="section-inner">
+
+				<?php get_search_form(); ?>
+
+			</div><!-- .section-inner -->
+
+		</div><!-- .search-container -->
+
+		<header class="header-wrapper">
+
+			<div class="header">
+
+				<div class="section-inner">
 					<?php if ( has_nav_menu( 'social' ) ) : ?>
 				
 						<ul class="social-menu reset-list-style">
@@ -62,29 +83,7 @@
 						</ul><!-- .social-menu -->
 
 					<?php endif; ?>
-				
-				</div><!-- .section-inner -->
-				
-			</div><!-- .top-nav -->
-			
-		<?php endif; ?>
-		
-		<div class="search-container">
-			
-			<div class="section-inner">
-			
-				<?php get_search_form(); ?>
-			
-			</div><!-- .section-inner -->
-			
-		</div><!-- .search-container -->
-		
-		<header class="header-wrapper">
-		
-			<div class="header">
-					
-				<div class="section-inner">
-				
+
 					<?php
 
 					$custom_logo_id 	= get_theme_mod( 'custom_logo' );
