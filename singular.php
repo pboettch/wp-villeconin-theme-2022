@@ -3,12 +3,12 @@
 <div class="wrapper section-inner group">
 	
 	<div class="content">
-												        
-		<?php 
-		if ( have_posts() ) : 
-			while ( have_posts() ) : 
+												
+		<?php
+		if ( have_posts() ) :
+			while ( have_posts() ) :
 			
-				the_post(); 
+				the_post();
 				?>
 		
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'single single-post group' ); ?>>
@@ -17,12 +17,12 @@
 											
 						<?php if ( is_single() && has_category() ) : ?>
 							<p class="post-categories"><?php the_category( ', ' ); ?></p>
-							<?php 
+							<?php
 						endif;
 						
 						the_title( '<h1 class="post-title">', '</h1>' );
 						
-						if ( is_single() ) : 
+						if ( is_single() ) :
 
 							$author_id = get_the_author_meta( 'ID' );
 							$author_posts_url = get_author_posts_url( $author_id );
@@ -35,12 +35,12 @@
 
 								<?php if ( comments_open() && ! post_password_required() ) : ?>
 									<span class="post-comments">
-										<?php 
+										<?php
 										comments_popup_link(
-											'<span class="fa fw fa-comment"></span>0<span class="resp"> ' . __( 'Comments', 'rowling' ) . '</span>', 
-											'<span class="fa fw fa-comment"></span>1<span class="resp"> ' . __( 'Comment', 'rowling' ) . '</span>', 
+											'<span class="fa fw fa-comment"></span>0<span class="resp"> ' . __( 'Comments', 'rowling' ) . '</span>',
+											'<span class="fa fw fa-comment"></span>1<span class="resp"> ' . __( 'Comment', 'rowling' ) . '</span>',
 											'<span class="fa fw fa-comment"></span>%<span class="resp"> ' . __( 'Comments', 'rowling' ) . '</span>'
-										); 
+										);
 										?>
 									</span>
 								<?php endif; ?>
@@ -51,7 +51,7 @@
 						
 					</div><!-- .post-header -->
 					
-					<?php 
+					<?php
 
 					$post_format = get_post_format() ? get_post_format() : 'standard';
 
@@ -63,7 +63,7 @@
 			
 						<figure class="post-image">
 								
-							<?php 
+							<?php
 								
 							the_post_thumbnail( 'post-image' );
 
@@ -75,7 +75,7 @@
 							
 						</figure><!-- .post-image -->
 							
-						<?php 
+						<?php
 					endif;
 					
 					if ( is_single() ) {
@@ -88,7 +88,7 @@
 		
 						<div class="post-content entry-content">
 						
-							<?php 
+							<?php
 							
 							the_content();
 							
@@ -100,7 +100,7 @@
 								'separator'        => '',
 								'pagelink'         => '%',
 								'echo'             => 1
-							) ); 
+							) );
 
 							?>
 						
@@ -140,12 +140,12 @@
 					
 				</article><!-- .post -->
 				
-				<?php 
+				<?php
 				
 				comments_template( '', true );
 			
-			endwhile; 
-		endif; 
+			endwhile;
+		endif;
 		?>
 	
 	</div><!-- .content -->

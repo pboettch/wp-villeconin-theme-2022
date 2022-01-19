@@ -46,7 +46,7 @@ if ( ! class_exists( 'Rowling_Customize' ) ) :
 					'settings' => 'rowling_logo',
 				) ) );
 				
-				$wp_customize->add_setting( 'rowling_logo', array( 
+				$wp_customize->add_setting( 'rowling_logo', array(
 					'sanitize_callback' => 'esc_url_raw'
 				) );
 
@@ -106,7 +106,7 @@ if ( ! class_exists( 'Rowling_Customize' ) ) :
 			self::generate_css( '.archive-title', 'border-bottom-color', $accent );
 			self::generate_css( '.archive-nav a:hover', 'color', $accent );
 
-			self::generate_css( '.widget-title', 'border-bottom-color', $accent );	           
+			self::generate_css( '.widget-title', 'border-bottom-color', $accent );	
 			self::generate_css( '.widget-content .textwidget a:hover', 'color', $accent );
 			self::generate_css( '.widget_archive li a:hover', 'color', $accent );
 			self::generate_css( '.widget_categories li a:hover', 'color', $accent );

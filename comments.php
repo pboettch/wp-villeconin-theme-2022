@@ -1,7 +1,7 @@
-<?php 
-if ( post_password_required() ) return; 
+<?php
+if ( post_password_required() ) return;
 	
-if ( have_comments() ) : 
+if ( have_comments() ) :
 	?>
 
 	<div class="comments-container">
@@ -14,7 +14,7 @@ if ( have_comments() ) :
 			
 				<h3 class="comments-title">
 					<span class="fa fw fa-comment"></span>
-					<?php 
+					<?php
 					$comment_count = count($wp_query->comments_by_type['comment']);
 					echo $comment_count . ' ' . _n( 'Comment', 'Comments', $comment_count, 'rowling' ); ?>
 				</h3>
@@ -37,7 +37,7 @@ if ( have_comments() ) :
 										
 						<h3 class="pingbacks-title">
 						
-							<?php 
+							<?php
 							$ping_count = count( $wp_query->comments_by_type['pings'] );
 							echo $ping_count . ' ' . _n( 'Pingback', 'Pingbacks', $ping_count, 'rowling' ); ?>
 						
@@ -66,10 +66,10 @@ if ( have_comments() ) :
 		
 	</div><!-- .comments-container -->
 	
-	<?php 
+	<?php
 endif;
 
-if ( comments_open() ) : 
+if ( comments_open() ) :
 	?>
 
 	<div class="respond-container">
@@ -84,5 +84,5 @@ if ( comments_open() ) :
 		?>
 	</div><!-- .respond-container -->
 
-	<?php 
+	<?php
 endif;

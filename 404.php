@@ -3,7 +3,7 @@
 <div class="wrapper section-inner group">
 
 	<div class="content">
-												        
+												
 		<article class="post single single-post">
 			
 			<p class="post-categories"><?php _e( 'Error 404', 'rowling' ); ?></p>

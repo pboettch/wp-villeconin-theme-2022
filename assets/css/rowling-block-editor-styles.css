@@ -75,7 +75,7 @@
 	font-size: inherit;
 }
 
-.editor-styles-wrapper .editor-block-list__block, 
+.editor-styles-wrapper .editor-block-list__block,
 .editor-styles-wrapper .editor-block-list__block p {
 	font-size: inherit;
 }
@@ -106,7 +106,7 @@
 .editor-styles-wrapper .wp-block h4 { font-size: 1.4em; }
 .editor-styles-wrapper .wp-block h5 { font-size: 1.2em; }
 
-.editor-styles-wrapper .wp-block h6 { 
+.editor-styles-wrapper .wp-block h6 {
 	font-size: 13px;
 	font-weight: 900;
 	letter-spacing: 1px;
@@ -120,9 +120,9 @@ p.has-drop-cap:not(:focus):first-letter {
 
 /* Monospace --------------------------------- */
 
-.editor-styles-wrapper code, 
-.editor-styles-wrapper kbd, 
-.editor-styles-wrapper pre, 
+.editor-styles-wrapper code,
+.editor-styles-wrapper kbd,
+.editor-styles-wrapper pre,
 .editor-styles-wrapper samp {
 	font-family: Menlo, Monaco, monospace !important;
 }
@@ -248,8 +248,8 @@ table.wp-block-table thead + tbody {
 	font-weight: 600;
 }
 
-.wp-block-table tbody > tr:nth-child(odd) > td { 
-	background: rgba( 0, 0, 0, 0.05 ); 
+.wp-block-table tbody > tr:nth-child(odd) > td {
+	background: rgba( 0, 0, 0, 0.05 );
 }
 
 /* Block: Separator -------------------------- */
@@ -314,7 +314,7 @@ hr.wp-block-separator {
 	text-align: left;
 }
 
-.wp-block-pullquote.alignleft, 
+.wp-block-pullquote.alignleft,
 .wp-block-pullquote.alignright {
 	max-width: 50%;
 }
@@ -377,9 +377,9 @@ cite,
 .wp-block-quote cite,
 .wp-block-quote footer,
 .wp-block-pullquote cite,
-.wp-block-quote.is-large cite, 
-.wp-block-quote.is-large footer, 
-.wp-block-quote.is-style-large cite, 
+.wp-block-quote.is-large cite,
+.wp-block-quote.is-large footer,
+.wp-block-quote.is-style-large cite,
 .wp-block-quote.is-style-large footer {
 	color: #111;
 	font-size: 13px;
@@ -394,11 +394,11 @@ cite,
 cite:before,
 .wp-block-quote footer:before,
 .wp-block-quote__citation:before,
-.wp-block-pullquote__citation:before { 
-	content: "— "; 
+.wp-block-pullquote__citation:before {
+	content: "— ";
 }
 
-.wp-block-quote.is-large, 
+.wp-block-quote.is-large,
 .wp-block-quote.is-style-large {
 	font-size: 1.25em;
 }

@@ -4520,7 +4520,7 @@ readers do not read off random characters that represent icons */
   overflow: visible;
   position: static;
   width: auto; }
-  
+
 .fab {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400; }

@@ -148,7 +148,7 @@ if ( ! function_exists( 'rowling_sidebar_registration' ) ) :
 		) );
 
 	}
-	add_action( 'widgets_init', 'rowling_sidebar_registration' ); 
+	add_action( 'widgets_init', 'rowling_sidebar_registration' );
 endif;
 
 
@@ -169,7 +169,7 @@ require get_template_directory() . '/inc/widgets/recent-posts.php';
 /* ---------------------------------------------------------------------------------------------
    MODIFY WIDGETS
    --------------------------------------------------------------------------------------------- */
- 
+
 if ( ! function_exists( 'rowling_unregister_default_widgets' ) ) :
 	function rowling_unregister_default_widgets() {
 
@@ -205,7 +205,7 @@ if ( ! function_exists( 'rowling_html_js_class' ) ) {
    --------------------------------------------------------------------------------------------- */
 
 if ( ! function_exists( 'rowling_related_posts' ) ) :
-	function rowling_related_posts( $number_of_posts = 3 ) { 
+	function rowling_related_posts( $number_of_posts = 3 ) {
 		?>
 		
 		<div class="related-posts">
@@ -263,8 +263,8 @@ if ( ! function_exists( 'rowling_related_posts' ) ) :
 							<?php endif; ?>
 							
 							<p class="category">
-								<?php 
-								$category = get_the_category( $related_post->ID ); 
+								<?php
+								$category = get_the_category( $related_post->ID );
 								echo $category[0]->cat_name;
 								?>
 							</p>
@@ -273,7 +273,7 @@ if ( ! function_exists( 'rowling_related_posts' ) ) :
 								
 						</a>
 					
-						<?php 
+						<?php
 
 					endforeach;
 				
@@ -403,14 +403,14 @@ if ( ! function_exists( 'rowling_flexslider' ) ) :
 
 			<?php foreach ( $images as $image ) :
 
-				$attimg = wp_get_attachment_image( $image->ID, $size ); 
+				$attimg = wp_get_attachment_image( $image->ID, $size );
 
 				if ( ! $attimg ) continue;
 				
 				?>
 				
 				<li>
-					<?php 
+					<?php
 					
 					echo $attimg;
 
@@ -423,7 +423,7 @@ if ( ! function_exists( 'rowling_flexslider' ) ) :
 
 		</ul><!-- .slides -->
 		
-		<?php 
+		<?php
 		echo ! is_single() ? '</a>' : '</div>';
 
 	}
@@ -496,13 +496,13 @@ if ( ! function_exists( 'rowling_comment' ) ) :
 							
 						<?php else :
 
-							comment_reply_link( array( 
+							comment_reply_link( array(
 								'reply_text' 	=> __( 'Reply', 'rowling' ),
-								'depth'			=> $depth, 
+								'depth'			=> $depth,
 								'max_depth' 	=> $args['max_depth'],
 								'before'		=> '<div class="fright"><div class="fa fw fa-reply"></div>',
 								'after'			=> '</div>'
-							) ); 
+							) );
 							
 						endif; ?>
 						

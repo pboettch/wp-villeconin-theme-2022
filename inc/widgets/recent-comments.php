@@ -1,12 +1,12 @@
-<?php 
+<?php
 
-if ( ! class_exists( 'Rowling_Recent_Comments' ) ) : 
+if ( ! class_exists( 'Rowling_Recent_Comments' ) ) :
 	class Rowling_Recent_Comments extends WP_Widget {
 
 		function __construct() {
-			parent::__construct( 'Rowling_Recent_Comments', __( 'Recent Comments', 'rowling' ), array( 
-				'classname' 	=> 'Rowling_Recent_Comments', 
-				'description' 	=> __( 'Displays recent comments with user avatars.', 'rowling' ) 
+			parent::__construct( 'Rowling_Recent_Comments', __( 'Recent Comments', 'rowling' ), array(
+				'classname' 	=> 'Rowling_Recent_Comments',
+				'description' 	=> __( 'Displays recent comments with user avatars.', 'rowling' )
 			) );
 		}
 		
@@ -40,7 +40,7 @@ if ( ! class_exists( 'Rowling_Recent_Comments' ) ) :
 				
 				// Comment loop
 				if ( $comments ) :
-					foreach ( $comments as $comment ) : 
+					foreach ( $comments as $comment ) :
 					
 						?>
 					
@@ -61,14 +61,14 @@ if ( ! class_exists( 'Rowling_Recent_Comments' ) ) :
 							
 						</li>
 						
-						<?php 
+						<?php
 					endforeach;
 				endif;
 				?>
 			
 			</ul>
 						
-			<?php 
+			<?php
 
 			echo $after_widget;
 

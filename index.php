@@ -47,17 +47,17 @@
 			</div><!-- .archive-header -->
 						
 		<?php endif; ?>
-																							                    
+																							
 		<?php if ( have_posts() ) : ?>
 		
 			<div class="posts" id="posts">
 					
-				<?php 
-				while ( have_posts() ) : the_post(); 
+				<?php
+				while ( have_posts() ) : the_post();
 		    	
 		    		get_template_part( 'content', get_post_format() );
-		    			        		            
-				endwhile; 
+		    			        		
+				endwhile;
 				?>
 	        	                    			
 			</div><!-- .posts -->
@@ -66,7 +66,7 @@
 			
 			get_template_part( 'pagination' );
 		
-		elseif ( is_search() ) : 
+		elseif ( is_search() ) :
 
 			?>
 
@@ -93,5 +93,5 @@
 	<?php get_sidebar(); ?>
 	
 </div><!-- .wrapper.section-inner -->
-	              	        
+	              	
 <?php get_footer(); ?>

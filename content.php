@@ -34,12 +34,12 @@
 		<?php endif; ?>
 		
 		<p class="post-meta">
-			<a href="<?php the_permalink(); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a> 
-			<?php 
+			<a href="<?php the_permalink(); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a>
+			<?php
 			if ( comments_open() ) {
 				echo " &mdash; ";
 				comments_popup_link( __( '0 Comments', 'rowling' ), __( '1 Comment', 'rowling' ), __( '% Comments' , 'rowling' ) );
-			} 
+			}
 			?>
 		</p>
 		

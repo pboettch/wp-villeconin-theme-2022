@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
         controlNav: false,
         prevText: "",
         nextText: "",
-        smoothHeight: true   
+        smoothHeight: true
     });
 	
 	

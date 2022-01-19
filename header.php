@@ -6,16 +6,16 @@
 		
 		<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
-		 
+		
 		<?php wp_head(); ?>
 	
 	</head>
 	
 	<body <?php body_class(); ?>>
 
-		<?php 
+		<?php
 		if ( function_exists( 'wp_body_open' ) ) {
-			wp_body_open(); 
+			wp_body_open();
 		}
 		?>
 
@@ -30,12 +30,12 @@
 					<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 
 						<ul class="secondary-menu dropdown-menu reset-list-style">
-							<?php 
-							wp_nav_menu( array( 
-								'container' 		=> '', 
+							<?php
+							wp_nav_menu( array(
+								'container' 		=> '',
 								'items_wrap' 		=> '%3$s',
 								'theme_location' 	=> 'secondary'
-							) ); 
+							) );
 							?>
 						</ul><!-- .secondary-menu -->
 
@@ -44,7 +44,7 @@
 					<?php if ( has_nav_menu( 'social' ) ) : ?>
 				
 						<ul class="social-menu reset-list-style">
-							<?php 
+							<?php
 							wp_nav_menu( array(
 								'theme_location'	=>	'social',
 								'container'			=>	'',
@@ -85,7 +85,7 @@
 					
 				<div class="section-inner">
 				
-					<?php 
+					<?php
 
 					$custom_logo_id 	= get_theme_mod( 'custom_logo' );
 					$legacy_logo_url 	= get_theme_mod( 'rowling_logo' );
@@ -95,7 +95,7 @@
 					$blog_title 		= get_bloginfo( 'title' );
 					$blog_description 	= get_bloginfo( 'description' );
 
-					if ( $custom_logo_id  || $legacy_logo_url ) : 
+					if ( $custom_logo_id  || $legacy_logo_url ) :
 
 						$custom_logo_url = $legacy_logo_url ? $legacy_logo_url : wp_get_attachment_image_url( $custom_logo_id, 'full' );
 					
@@ -142,13 +142,13 @@
 						
 						<?php if ( has_nav_menu( 'primary' ) ) {
 
-							$nav_args = array( 
-								'container' => '', 
+							$nav_args = array(
+								'container' => '',
 								'items_wrap' => '%3$s',
 								'theme_location' => 'primary'
 							);
 																		
-							wp_nav_menu( $nav_args ); 
+							wp_nav_menu( $nav_args );
 						
 						} else {
 
@@ -169,9 +169,9 @@
 				
 			<ul class="mobile-menu reset-list-style">
 				
-				<?php 
+				<?php
 				if ( has_nav_menu( 'primary' ) ) {
-					wp_nav_menu( $nav_args ); 
+					wp_nav_menu( $nav_args );
 				} else {
 					wp_list_pages( $list_pages_args );
 				}

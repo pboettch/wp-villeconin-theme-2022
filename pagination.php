@@ -6,7 +6,7 @@ if ( $wp_query->max_num_pages > 1 ) : ?>
 			
 	<div class="archive-nav">
 			
-		<?php 
+		<?php
 		if ( get_previous_posts_link() ) echo '<li class="archive-nav-newer">' . get_previous_posts_link( '&larr; ' . __( 'Previous', 'rowling' ) ) . '</li>';
 
 		$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
@@ -55,7 +55,7 @@ if ( $wp_query->max_num_pages > 1 ) : ?>
 			printf( '<li class="number%s"><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
 		}
 					
-		if ( get_next_posts_link() ) echo '<li class="archive-nav-older">' . get_next_posts_link( __( 'Next', 'rowling' ) . ' &rarr;' ) . '</li>'; 
+		if ( get_next_posts_link() ) echo '<li class="archive-nav-older">' . get_next_posts_link( __( 'Next', 'rowling' ) . ' &rarr;' ) . '</li>';
 		?>
 		
 		<div class="clear"></div>

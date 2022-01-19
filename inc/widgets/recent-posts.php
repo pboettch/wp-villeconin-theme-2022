@@ -1,12 +1,12 @@
-<?php 
+<?php
 
 if ( ! class_exists( 'Rowling_Recent_Posts' ) ) :
 	class Rowling_Recent_Posts extends WP_Widget {
 
 		function __construct() {
-			parent::__construct( 'Rowling_Recent_Posts', __( 'Recent Posts', 'rowling' ), array( 
-				'classname' 	=> 'Rowling_Recent_Posts', 
-				'description' 	=> __( 'Displays recent blog entries.', 'rowling' ) 
+			parent::__construct( 'Rowling_Recent_Posts', __( 'Recent Posts', 'rowling' ), array(
+				'classname' 	=> 'Rowling_Recent_Posts',
+				'description' 	=> __( 'Displays recent blog entries.', 'rowling' )
 			) );
 		}
 		
@@ -37,14 +37,14 @@ if ( ! class_exists( 'Rowling_Recent_Posts' ) ) :
 				) );
 				
 				if ( $recent_posts ) :
-					foreach ( $recent_posts as $recent_post ) : 
+					foreach ( $recent_posts as $recent_post ) :
 					
 						?>
 				
 						<li>
 							<a href="<?php the_permalink( $recent_post->ID ); ?>" class="group">
 								<div class="post-icon">
-									<?php 
+									<?php
 									if ( $post_thumbnail = get_the_post_thumbnail( $recent_post, 'thumbnail' ) ) {
 										echo $post_thumbnail;
 									} elseif ( get_post_format( $recent_post ) == 'gallery' ) {
@@ -61,16 +61,16 @@ if ( ! class_exists( 'Rowling_Recent_Posts' ) ) :
 							</a>
 						</li>
 				
-					<?php 
+					<?php
 					endforeach;
-				endif; 
+				endif;
 				?>
 		
 			</ul>
 					
 			<?php
 			
-			echo $after_widget; 
+			echo $after_widget;
 
 		}
 		
