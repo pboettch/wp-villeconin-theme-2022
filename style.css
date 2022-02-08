@@ -1760,6 +1760,46 @@ p.intro {
 	font-weight: 900;
 }
 
+.post-content .wsp-pages-title {
+	display: none;
+}
+
+ul {
+}
+
+ul.wsp-pages-list, ul.children {
+	list-style-type: none;
+
+	columns: 2;
+	-webkit-columns: 2;
+	-moz-columns: 2;
+
+	font-family: Lato, Helvetica, sans-serif;
+	font-size: 1rem;
+	/* text-shadow: 0 1px 0 #777; */
+    text-transform: uppercase;
+
+	display: block;
+	width: 100%;
+	margin: 0;
+	background: #fff;
+	color: #111;
+}
+
+ul.wsp-pages-list li {
+	padding: 0px 0px 10px 0px;
+}
+
+ul.children li {
+	padding: 0px 0px 0px 20px;
+}
+
+
+ul.wsp-pages-list a, ul.children a {
+	font-weight: bold;
+    text-decoration: none;
+}
+
 /* Alignment Classes ------------------------- */
 
 .alignnone,
@@ -3249,6 +3289,14 @@ div.comment { margin-top: 25px; }
 	.post-content p.intro {
 		font-size: 1.1em;
 		line-height: 140%;
+	}
+
+	ul.wsp-pages-list, ul.children {
+		list-style-type: none;
+
+		columns: 1;
+		-webkit-columns: 1;
+		-moz-columns: 1;
 	}
 
 	/* Blocks -------------------------------- */
