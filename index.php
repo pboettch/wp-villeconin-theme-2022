@@ -3,7 +3,7 @@
 <div class="wrapper section-inner group">
 
 	<div class="content">
-
+		<?php echo do_shortcode('[metaslider title="Accueil"]'); ?>
 		<?php
 
 		$archive_title = '';
