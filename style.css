@@ -1770,9 +1770,6 @@ ul {
 ul.wsp-pages-list, ul.children {
 	list-style-type: none;
 
-	columns: 2;
-	-webkit-columns: 2;
-	-moz-columns: 2;
 
 	font-family: Lato, Helvetica, sans-serif;
 	font-size: 1rem;
@@ -1784,6 +1781,20 @@ ul.wsp-pages-list, ul.children {
 	margin: 0;
 	background: #fff;
 	color: #111;
+}
+
+ul.wsp-pages-list {
+	columns: 2;
+	-webkit-columns: 2;
+	-moz-columns: 2;
+}
+
+ul.children {
+	columns: 1;
+	-webkit-columns: 1;
+	-moz-columns: 1;
+
+	font-size: 0.9rem;
 }
 
 ul.wsp-pages-list li {
