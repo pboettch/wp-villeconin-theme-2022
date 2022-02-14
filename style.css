@@ -941,7 +941,7 @@ input[type="submit"]:hover {
 	background: #171d3d;
 }
 
-.header { padding: 40px 10px; }
+.header { padding: 10px 10px; }
 
 .blog-title {
 	font-size: 1.5em;
