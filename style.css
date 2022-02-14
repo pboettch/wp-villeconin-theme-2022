@@ -1767,7 +1767,7 @@ p.intro {
 ul {
 }
 
-ul.wsp-pages-list, ul.children {
+ul.page-list, ul.wsp-pages-list, ul.children {
 	list-style-type: none;
 
 
@@ -1806,7 +1806,7 @@ ul.children li {
 }
 
 
-ul.wsp-pages-list a, ul.children a {
+ul.page-list a, ul.wsp-pages-list a, ul.children a {
 	font-weight: bold;
     text-decoration: none;
 }
