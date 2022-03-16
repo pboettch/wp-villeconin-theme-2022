@@ -990,7 +990,7 @@ input[type="submit"]:hover {
 }
 
 .primary-menu {
-	font-size: 0.8rem;
+	font-size: 1rem;
 }
 
 .primary-menu a {
@@ -1772,8 +1772,8 @@ ul.page-list, ul.wsp-pages-list, ul.children {
 
 
 	font-family: Lato, Helvetica, sans-serif;
-	font-size: 1rem;
-	/* text-shadow: 0 1px 0 #777; */
+	font-size: 1.1rem;
+	text-shadow: 1px 1px 0 #777;
     text-transform: uppercase;
 
 	display: block;
@@ -1795,6 +1795,7 @@ ul.children {
 	-moz-columns: 1;
 
 	font-size: 0.9rem;
+	text-shadow: none;
 }
 
 ul.wsp-pages-list li {
